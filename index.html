@@ -130,13 +130,15 @@
           type="text"
           placeholder="영화 제목을 입력하세요."
         />
-        <button id="search-btn" type="submit">검색</button>
+        <button id="search-btn" type="submit" onclick="searchbtn()">
+          검색
+        </button>
       </form>
 
       <div class="card__inner container" id="poster">
         <article class="card" id="MyArticle">
           <img src="" alt="" />
-          <h3 class="tit">ye</h3>
+          <h3 class="tit" id="movieTitle"></h3>
           <p class="desc"></p>
         </article>
       </div>
