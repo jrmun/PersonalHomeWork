@@ -30,10 +30,14 @@ function show_movie() {
 
 function searchbtn() {
   const d3 = document.getElementById("search-input").value;
-  const d2 = document.querySelector("#movieTitle").value;
-  console.log(d2);
+  const d2 = document.querySelectorAll("#movieTitle");
+  for (i = 0; i < d2.length; i++) {
+    let d4 = d2[i].innerHTML;
+    if (d4.includes(d3)) {
+      alert("true");
+    }
+  }
 }
-
 function alertId(id) {
   alert("id : " + id);
 }
