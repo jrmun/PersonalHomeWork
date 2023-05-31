@@ -127,7 +127,11 @@
           id="search-input"
           type="text"
           placeholder="영화 제목을 입력하세요."
+          autofocus
+          onkeypress="btnclick(event)"
         />
+        <input type="text" style="display: none" />
+        <!-- 입력란에 자동으로 포커스하게 만듬 autofocus -->
         <button type="button" id="search-btn" onclick="searchbtn()">
           검색
         </button>
