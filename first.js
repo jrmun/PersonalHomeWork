@@ -91,3 +91,5 @@ function btnclick(e) {
     searchbtn();
   }
 }
+//onkeypress를 넣어 event가 발생했을 때 e.code가 enter라면 searchbtn함수가 실행된다.
+//추가 중

@@ -130,8 +130,11 @@
           autofocus
           onkeypress="btnclick(event)"
         />
-        <input type="text" style="display: none" />
         <!-- 입력란에 자동으로 포커스하게 만듬 autofocus -->
+        <input type="text" style="display: none" />
+        <!-- form안에서 input이 하나라면 submit되는 현상이 있었음. 추가로 의미 없는 input
+        을 넣어줌으로서 해결함 다른 해결 방안 =>
+        form대신 div를 넣는다. / onsubmit = return false;를 넣어준다. / 검증 함수 사용 -->
         <button type="button" id="search-btn" onclick="searchbtn()">
           검색
         </button>
