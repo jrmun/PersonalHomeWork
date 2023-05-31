@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>카드 유형02</title>
-    <script src="first.js"></script>
     <style>
       @import url("https://webfontworld.github.io/gmarket/GmarketSans.css");
       * {
@@ -117,19 +116,19 @@
         -webkit-box-orient: vertical;
       }
     </style>
-    <script src="./first.js"></script>
   </head>
   <body>
     <section id="cardType02" class="card__wrap gmark section gray">
       <h2>내배캠 최고 평점 영화 콜렉션</h2>
-      <form class="search" onsubmit="">
+
+      <form class="search">
         <label>영화 검색 :</label>
         <input
           id="search-input"
           type="text"
           placeholder="영화 제목을 입력하세요."
         />
-        <button id="search-btn" type="submit" onclick="searchbtn()">
+        <button type="button" id="search-btn" onclick="searchbtn()">
           검색
         </button>
       </form>
@@ -142,5 +141,10 @@
         </article>
       </div>
     </section>
+
+    <script src="first.js"></script>
+    <script>
+      show_movie();
+    </script>
   </body>
 </html>
