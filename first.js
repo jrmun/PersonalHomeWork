@@ -42,9 +42,10 @@ function show_movie() {
 }
 
 function searchbtn() {
-  const searchItem = document.getElementById("search-input").value;
-  console.log(searchItem);
-
+  const searchItem = document.getElementById("search-input");
+  const searchItemValue = searchItem.value;
+  searchItem.value = null;
+  // input에서 값을 받아오고, input은 초기화시켜준다.
   fetch(
     "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1",
     options
@@ -59,9 +60,11 @@ function searchbtn() {
         return movie.title
           .toLowerCase()
           .replace(/\s/gi, "")
-          .includes(searchItem.toLowerCase().replace(/\s/gi, ""));
+          .includes(searchItemValue.toLowerCase().replace(/\s/gi, ""));
       }); // filter를 통해 data에서 사용자가 작성한 input-data를 비교해 해당되는 data만
       //movies에 저장함
+      //toLowerCase()를 통해 대소문자 구분없이, replace를 통해 띄어쓰기,공백 구분없이
+      //검색할 수 있게 구성했다.
       movies.forEach((a) => {
         let title = a["title"];
         let poster_path = a["poster_path"];
