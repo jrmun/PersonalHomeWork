@@ -12,7 +12,6 @@
       <h2>내배캠 최고 평점 영화 콜렉션</h2>
 
       <form class="search">
-        <label>영화 검색 :</label>
         <input
           id="search-input"
           type="text"
@@ -28,6 +27,10 @@
         <button type="button" id="search-btn" onclick="searchbtn()">
           검색
         </button>
+        <label><input type="radio" , name="sort" value="vote" />평점</label>
+        <label
+          ><input type="radio" , name="sort" value="title" checked />제목</label
+        >
       </form>
 
       <div class="card__inner container" id="poster">
