@@ -56,7 +56,10 @@ function searchbtn() {
       poster.innerHTML = ""; //기존 poster를 초기화 시켜줌 innerTEXT로도 작동하며
       //innerTEXT가 보안상 더 안전하다는 정보가 있다.
       let movies = rows.filter((movie) => {
-        return movie.title.toLowerCase().includes(searchItem.toLowerCase());
+        return movie.title
+          .toLowerCase()
+          .replace(/\s/gi, "")
+          .includes(searchItem.toLowerCase().replace(/\s/gi, ""));
       }); // filter를 통해 data에서 사용자가 작성한 input-data를 비교해 해당되는 data만
       //movies에 저장함
       movies.forEach((a) => {
